@@ -1,0 +1,28 @@
+.hero {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 40rem;
+  gap: 1rem;
+  padding: 3rem 0;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero h1 span {
+  font-size: 2rem;
+  font-weight: 500;
+  display: block;
+}
+
+.hero > div {
+  display: flex;
+  gap: 2rem;
+}

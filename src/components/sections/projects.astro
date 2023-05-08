@@ -1,0 +1,88 @@
+---
+import imperium from "../../assets/images/imperium.png";
+import goloka from "../../assets/images/goloka.png";
+import medcob from "../../assets/images/medcob.png";
+import materialspro from "../../assets/images/materialspro.png";
+import styles from "./projects.module.css";
+import { Image } from "astro:assets";
+
+const projects: {
+  name: string;
+  link: string;
+  description: string;
+  image: ImageMetadata;
+}[] = [
+  {
+    name: "Imperium Energy Platform",
+    link: "https://imperium-market-place.vercel.app",
+    description: `Imperium Energy Platform is a marketplace for solar energy products and services.
+    I worked on the frontend of the platform using React, Typescript, SWR and Radix UI to build a fast, responsive and accessible web app.
+    `,
+    image: imperium,
+  },
+  {
+    description: `
+    Goloka is a platform that connects businesses to field agents for questionnaire surveys.
+    I worked as a fullstack engineer on the platform using React, Typescript, Material UI, SurveyJS, NestJS, Prisma and PostgreSQL to build the platform.
+    `,
+    image: goloka,
+    link: "https://www.goloka.io",
+    name: "Goloka",
+  },
+  {
+    name: "MedCob",
+    description: `
+    MedCob is a platform that connects patients to doctors for medical consultations.
+    I collaborated with a team of engineers to build the platform using React, Typescript, Material UI, Express, and MongoDB.
+    `,
+    image: medcob,
+    link: "https://www.medcob.com",
+  },
+  {
+    name: "MaterialsPro",
+    description: `
+    MaterialsPro is a platform that connects construction material suppliers to industrial builders.
+    I collaborated with a team of engineers to build the platform using React, Typescript, Ant Design, Express, Sequelize and PostgreSQL.
+    `,
+    image: materialspro,
+    link: "https://www.materialspro.ng",
+  },
+];
+---
+
+    <section id="projects" class={styles.projects}>
+      <h2>Selected Works</h2>
+      <ul>
+        {projects.map((project, i) => (
+          <li >
+            <details open={i === 0}>
+              <summary>
+                <h3>{project.name}</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"
+                  />
+                </svg>
+              </summary>
+              <div class={styles.project}>
+                <div>
+                  <p>{project.description}</p>
+                  <a href={project.link} target="_blank" rel="noopener noreferrer">
+                    Visit project
+                  </a>
+                </div>
+                <Image src={project.image} alt={project.name} />
+              </div>
+            </details>
+          </li>
+        ))}
+      </ul>
+      <p>
+        You can find more of my work on{" "}
+        <a href="https://github.com/salvadorlekan" target="_blank" rel="noopener noreferrer">
+          Github
+        </a>
+        .
+      </p>
+    </section>

@@ -1,0 +1,62 @@
+.projects ul {
+  list-style: none;
+}
+
+.projects > p {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.projects summary {
+  cursor: pointer;
+  padding: 0.2rem;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  border-top: 1px solid;
+}
+.projects li:last-of-type summary {
+  border-bottom: 1px solid;
+}
+
+.projects svg {
+  transition: transform 0.2s ease-in-out;
+}
+
+.projects details[open] svg {
+  transform: rotate(45deg);
+}
+
+.projects summary::-webkit-details-marker,
+.projects summary::marker {
+  display: none;
+}
+
+.projects h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-block: 0.5rem;
+  text-align: center;
+}
+
+.projects img {
+  border-radius: 0.5rem;
+}
+
+.project {
+  display: grid;
+  gap: 40px;
+  padding: 0.5rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .project {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.projects h3 {
+  font-size: 1.5rem;
+}

@@ -1,15 +1,59 @@
 ---
+import HeroSection from "../components/sections/hero";
+import "@fontsource/bebas-neue";
+import "@fontsource/inter";
+import "../styles/globals.css";
+import ToolsSection from "../components/sections/tools";
+import ProjectsSection from "../components/sections/projects.astro";
+import ContactSection from "../components/sections/contact";
+import { SEO } from "astro-seo";
 ---
 
+<style is:global>
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Bebas Neue";
+  }
+  :root {
+    font-family: "Inter", sans-serif;
+  }
+</style>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <SEO
+      canonical="https://salvadorlekan.com.ng"
+      charset="utf-8"
+      description="Salvador AbdulRahman is a software engineer based in Lagos, Nigeria. He is passionate about building products that solve real problems."
+      title="Salvador AbdulRahman | Software Engineer"
+      openGraph={{
+        basic: {
+          title: "Salvador AbdulRahman | Software Engineer",
+          url: "https://salvadorlekan.com.ng",
+          image: "/images/og-image.png",
+          type: "website",
+        },
+      }}
+      twitter={{
+        creator: "@salvadorlekan",
+        site: "@salvadorlekan",
+      }}
+    />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="any" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="keywords" content="Software developer,Software engineer,Frontend developer,Frontend Engineer" />
+    <meta name="color-scheme" content="dark" />
+  </head>
+  <body>
+    <main>
+      <HeroSection />
+      <ToolsSection />
+      <ProjectsSection />
+      <ContactSection />
+    </main>
+  </body>
 </html>

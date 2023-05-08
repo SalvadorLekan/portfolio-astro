@@ -1,0 +1,35 @@
+.tools {
+  max-width: 58rem;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+.tools h2 {
+  text-align: center;
+}
+.tools ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+  gap: 0.5rem 2.3rem;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 768px) {
+  .tools ul {
+    gap: 0.5rem 3rem;
+  }
+}
+
+.level1 {
+  font-size: 0.8rem;
+}
+
+.level2 {
+  font-weight: 600;
+}
+
+.level3 {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
