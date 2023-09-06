@@ -9,5 +9,6 @@ export default defineConfig({
   output: "hybrid",
   adapter: cloudflare({
     mode: "directory",
+    functionPerRoute: true,
   }),
 });
