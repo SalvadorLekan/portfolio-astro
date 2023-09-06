@@ -6,3 +6,8 @@ export const POST: APIRoute = ({ params }) => {
 };
 
 export const prerender = false;
+
+export const GET: APIRoute = ({ params }) => {
+  const { message } = params;
+  return new Response(`Hello, ${message}!`);
+};
